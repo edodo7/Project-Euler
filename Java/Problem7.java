@@ -4,9 +4,11 @@ class Main {
 	}
 
 	private static boolean isPrime(int n) {
-		int sqrtNumb = (int) Math.sqrt(n) + 1;
-		if( (n != 2) && (n == 1 || n % 2 == 0))
+		if(n == 2)
+			return true;
+		if(n == 1 || n % 2 == 0)
 			return false;
+		int sqrtNumb = (int) Math.sqrt(n) + 1;
 		for(int i = 3 ; i < sqrtNumb; i += 2)
 			if (n % i == 0)
 				return false;
